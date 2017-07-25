@@ -1,0 +1,12 @@
+%Link {
+    border-bottom: 1px solid currentColor !important;
+    color: palette(primary);
+
+    &:hover {
+        color: palette(secondary);
+    }
+}
+
+.Link {
+    @extend %Link;
+}

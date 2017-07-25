@@ -1,0 +1,21 @@
+.Body {
+    background-color: palette(light);
+    color: palette(dark);
+    font-family: $serif;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: auto;
+    padding: 0;
+}
+
+@media (max-width: 684px) {
+    .Body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 382px) {
+    .Body {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,12 @@
+.ReadMore {
+    padding: 3rem 0;
+    text-align: center;
+
+    &__link {
+        color: palette(primary);
+
+        &:hover {
+            color: palette(secondary);
+        }
+    }
+}

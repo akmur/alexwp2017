@@ -1,0 +1,15 @@
+.Footer {
+    background: palette(light, high);
+    margin-top: 6rem;
+    padding: 4rem 0;
+    text-align: center;
+
+    &__text {
+        @include font(serif, 1.5, 400);
+    }
+
+    &__link {
+        border-bottom: 1px solid currentColor;
+        @extend %Link;
+    }
+}

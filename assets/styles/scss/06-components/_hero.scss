@@ -1,0 +1,53 @@
+.Hero {
+    display: flex;
+    flex-direction: column;
+    height: 78vh;
+    justify-content: center;
+    margin-bottom: 12vh;
+    padding: 0 2rem;
+
+    @include tablet {
+        padding: 2rem;
+    }
+
+    @include desktop {
+        padding: 3rem;
+    }
+
+    &__quote {
+        @include font('sans', 1.75, 200);
+        line-height: 1.5;
+        margin: 0;
+
+        @include tablet {
+            @include font('sans', 2.5, 200);
+        }
+
+        @include desktop {
+            @include font('sans', 3, 200);
+        }
+    }
+
+    &__quoteWrapper {
+        margin: 0 auto;
+        max-width: 60em;
+    }
+
+    &__cta {
+        @include font('sans', 1.25, 200);
+        border-bottom: 1px solid currentColor;
+        color: palette(primary);
+
+        @include tablet {
+            @include font('sans', 1.25, 200);
+        }
+
+        @include desktop {
+            @include font('sans', 1.5, 200);
+        }
+
+        &:hover {
+            color: palette(secondary);
+        }
+    }
+}

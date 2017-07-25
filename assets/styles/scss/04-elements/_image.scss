@@ -1,0 +1,18 @@
+img,
+figure {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+figure {
+    margin: 0 0 1em;
+}
+
+figcaption {
+    padding: 0.5em 1em;
+    background: palette(light, high);
+    border-bottom: 2px solid palette(primary, low);
+}

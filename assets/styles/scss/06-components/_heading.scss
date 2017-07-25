@@ -1,0 +1,59 @@
+.Heading {
+    $root: &;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 120em;
+
+    &--alt {
+        flex-direction: row-reverse;
+    }
+
+    &--singlePost {
+        align-items: center;
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__titleGroup {
+        padding: 4em;
+        text-align: right;
+        width: 50%;
+
+        #{$root}--singlePost & {
+            display: inline-block;
+            margin-top: -15rem;
+            position: relative;
+            text-align: center;
+        }
+
+        #{$root}--alt & {
+            text-align: left;
+        }
+    }
+
+    &__titleGroupContent {
+        padding: 1rem;
+    }
+
+    &__title {
+        #{$root}--singlePost & {
+            background: rgba(255, 255, 255, 0.8);
+            color: palette(dark);
+            display: inline-block;
+            font-weight: 300;
+            padding: 0.5em 1em;
+        }
+    }
+
+    &__featuredImage {
+        width: 50%;
+
+        #{$root}--singlePost & {
+            width: 100%;
+        }
+    }
+}

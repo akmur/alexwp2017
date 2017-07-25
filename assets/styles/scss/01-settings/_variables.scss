@@ -1,0 +1,21 @@
+$color-blossom: #2c8898;
+$color-fade: #982c61;
+$color-bg-low: #ffffff;
+$color-bg: #f9f9f9;
+$color-bg-high: #eaeaea;
+$color-base-blue: #2c8898;
+$color-base-grey: #4a4a4a;
+$color-base-red: #EA5E63;
+
+$transition: all 0.15s ease;
+
+$sans: 'Montserrat', sans;
+$serif: 'Georgia', serif;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+%Wrapper {
+    margin: 0 auto;
+    max-width: 50em;
+}

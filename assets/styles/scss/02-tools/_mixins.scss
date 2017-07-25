@@ -1,0 +1,49 @@
+$palettes: (
+    dark: (
+        low: lighten($color-base-grey, 10%),
+        base:  $color-base-grey,
+        high: darken($color-base-grey, 10%)
+    ),
+    primary: (
+        low: lighten($color-base-blue, 10%),
+        base:  $color-base-blue,
+        high: darken($color-base-blue, 10%)
+    ),
+    secondary: (
+        low: lighten($color-base-red, 10%),
+        base:  $color-base-red,
+        high: darken($color-base-red, 10%)
+    ),
+    light: (
+        low: $color-bg-low,
+        base: $color-bg,
+        high: $color-bg-high
+    )
+);
+
+@mixin font($face: 'sans', $size: 1, $weight: 400) {
+    $fontsize: $size + unquote('rem');
+    @if ($face == 'sans') {
+        font-family: $sans;
+    } @else {
+        font-family: $serif;
+    }
+    font-size: $fontsize;
+    font-weight: $weight;
+}
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
