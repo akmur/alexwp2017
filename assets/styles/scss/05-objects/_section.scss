@@ -39,11 +39,31 @@
     }
 
     &--link {
+        border-top: 1px solid palette(primary);
         opacity: 0.9;
         transition: opacity 200ms ease;
 
+        &:last-child {
+            border-bottom: 1px solid palette(primary);
+
+            @include tablet {
+                border: 0;
+            }
+        }
+
+        @include tablet {
+            border-top: 0;
+        }
+
         &:hover {
             opacity: 1;
+        }
+    }
+
+    &--loadMore,
+    &--readMore {
+        @include tablet {
+            margin: 8rem 0;
         }
     }
 }

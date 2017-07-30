@@ -1,11 +1,27 @@
 .Footer {
     background: palette(light, high);
-    margin-top: 6rem;
-    padding: 4rem 0;
+    padding: 0 2rem;
     text-align: center;
 
+    @include tablet {
+        padding: 4rem;
+    }
+
+    &__container {
+        @extend %Wrapper;
+    }
+
     &__text {
-        @include font(serif, 1.5, 400);
+        @include font(serif, 1, 400);
+        margin-bottom: 1em;
+
+        @include tablet {
+            @include font(serif, 1.5, 400);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__link {

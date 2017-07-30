@@ -1,13 +1,14 @@
 .Hero {
     display: flex;
     flex-direction: column;
-    height: 78vh;
+    height: 68vh;
     justify-content: center;
     margin-bottom: 12vh;
     padding: 0 2rem;
 
     @include tablet {
         padding: 2rem;
+        height: 78vh;
     }
 
     @include desktop {
@@ -15,16 +16,26 @@
     }
 
     &__quote {
-        @include font('sans', 1.75, 200);
+        @include font('sans', 1.375, 200);
         line-height: 1.5;
         margin: 0;
+        text-align: center;
 
         @include tablet {
             @include font('sans', 2.5, 200);
+            text-align: left;
         }
 
         @include desktop {
             @include font('sans', 3, 200);
+        }
+    }
+
+    &__quoteSmall {
+        @include font('sans', 1.25, 200);
+
+        @include tablet {
+            @include font('sans', 1.25, 200);
         }
     }
 

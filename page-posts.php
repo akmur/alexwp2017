@@ -14,11 +14,8 @@
 
 get_header(); ?>
 
-<div class="pageListing">
-    <div v-show="showPosts">
-        <post-heading-listing :number-of-posts=10></post-heading-listing>
-        <posts-pagination :message=message :page=page :total-pages=totalPages></posts-pagination>
-    </div>
+<div class="PageListing">
+    <post-listing :number-of-posts=10></post-listing>
 </div>
 
 <?php

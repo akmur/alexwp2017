@@ -1,0 +1,7 @@
+.LoadMore {
+    padding: 0;
+
+    @include tablet {
+        padding: 8rem 0;
+    }
+}

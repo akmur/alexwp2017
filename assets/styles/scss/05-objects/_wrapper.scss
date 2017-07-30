@@ -1,0 +1,9 @@
+%Wrapper {
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 2rem;
+
+    @include tablet {
+        padding: 4rem 2rem;
+    }
+}

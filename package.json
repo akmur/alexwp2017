@@ -11,9 +11,9 @@
     "browsersync": "browser-sync start --no-open --reload-delay 1000 --reload-debounce --proxy $npm_package_config_proxy --files './assets/styles/css/main.css' './assets/js/dist/*.js' './**/*.php'",
     "build:css": "node-sass -o ./assets/styles/css/ ./assets/styles/scss/main.scss && npm run autoprefixer",
     "build:js": "webpack -p --config webpack.config.js",
-    "clean:css": "cleancss --compatibility ie9 -o ./assets/styles/css/main.min.css ./assets/styles/css/main.css",
-    "dev": "environment=dev npm run firstrun & npm run watch:all & npm run browsersync",
-    "dist": "environment=dist npm run build:js && npm run build:css && npm run autoprefixer && npm run mqpacker && npm run clean:css",
+    "clean:css": "cleancss --compatibility ie9 -o ./assets/styles/css/main.css ./assets/styles/css/main.css",
+    "dev": "NODE_ENV=dist npm run firstrun & npm run watch:all & npm run browsersync",
+    "dist": "NODE_ENV=dev npm run build:js && npm run build:css && npm run autoprefixer && npm run mqpacker && npm run clean:css",
     "mqpacker": "mqpacker -s ./assets/styles/css/main.css ./assets/styles/css/main.css",
     "firstrun": "npm run build:css && npm run build:js",
     "watch:all": "npm-run-all -p watch:css watch:js",
@@ -27,8 +27,7 @@
     "babel-core": "^6.24.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.4.1",
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.8",
     "clean-css-cli": "^4.0.12",
     "css-mqpacker": "^5.0.1",
@@ -44,9 +43,7 @@
     "stylelint": "^7.10.1",
     "stylelint-order": "^0.4.3",
     "unminified-webpack-plugin": "^1.2.0",
-    "vue": "^2.4.1",
-    "vue-resource": "^1.3.4",
-    "webpack": "^2.3.2"
+    "webpack": "^3.4.1"
   },
   "browserslist": [
     "> 1%",

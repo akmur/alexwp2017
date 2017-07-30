@@ -12,10 +12,5 @@ $transition: all 0.15s ease;
 $sans: 'Montserrat', sans;
 $serif: 'Georgia', serif;
 
-$tablet-width: 768px;
+$tablet-width: 650px;
 $desktop-width: 1024px;
-
-%Wrapper {
-    margin: 0 auto;
-    max-width: 50em;
-}

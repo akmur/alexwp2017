@@ -117,7 +117,7 @@ function alex2017_widgets_init() {
 add_action( 'widgets_init', 'alex2017_widgets_init' );
 
 function wpb_add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Arapey|Droid+Serif|Lora|Montserrat:200,300,400,700', false ); 
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700', false ); 
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
@@ -131,7 +131,7 @@ if( function_exists('acf_add_options_page') ) {
  */
 function alex2017_scripts() {
 	wp_enqueue_style( 'alex2017-style', get_template_directory_uri() . '/assets/styles/css/main.css' );
-	wp_enqueue_script( 'alex2017-script', get_template_directory_uri() . '/assets/js/dist/main.bundle.nomin.js', [], rand(1,1000000), true );
+	wp_enqueue_script( 'alex2017-script', get_template_directory_uri() . '/assets/js/dist/main.bundle.js', [], false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

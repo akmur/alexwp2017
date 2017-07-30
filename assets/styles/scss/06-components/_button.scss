@@ -1,0 +1,22 @@
+.Button {
+    @extend %Link;
+    @include font(sans, 1.5, 300);
+    background: palette(primary);
+    border: 0 !important;
+    color: palette(light);
+    display: block;
+    padding: 1rem;
+    transition: $transition;
+
+    @include tablet {
+        background: palette(primary);
+        display: inline-block;
+        padding: 1rem 2rem;
+    }
+
+    &:hover,
+    &:focus {
+        background: palette(primary, low);
+        color: palette(light);
+    }
+}

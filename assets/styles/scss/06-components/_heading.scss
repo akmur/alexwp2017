@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    max-width: 120em;
+    position: relative;
 
     &--alt {
         flex-direction: row-reverse;
@@ -13,25 +13,52 @@
     &--singlePost {
         align-items: center;
         display: flex;
-        height: 90vh;
+        height: 40vh;
         justify-content: center;
         width: 100%;
+
+        @include tablet {
+            height: 90vh;
+        }
+    }
+
+    &__credits {
+        bottom: 4vh;
+        display: none;
+        position: absolute;
+        text-align: center;
+
+        @include tablet {
+            display: block;
+        }
     }
 
     &__titleGroup {
-        padding: 4em;
-        text-align: right;
-        width: 50%;
+        padding: 2em;
+        text-align: center;
+        width: 100%;
+
+        @include desktop {
+            padding: 4em;
+            text-align: right;
+            width: 50%;
+        }
 
         #{$root}--singlePost & {
             display: inline-block;
-            margin-top: -15rem;
-            position: relative;
+            margin-top: -2rem;
             text-align: center;
+
+            @include tablet {
+                margin-top: -15rem;
+                position: relative;
+            }
         }
 
         #{$root}--alt & {
-            text-align: left;
+            @include tablet {
+                text-align: left;
+            }
         }
     }
 
@@ -41,16 +68,27 @@
 
     &__title {
         #{$root}--singlePost & {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(palette(light), 0.8);
             color: palette(dark);
             display: inline-block;
             font-weight: 300;
+            margin: 0;
             padding: 0.5em 1em;
+
+            @include tablet {
+                margin-bottom: 0.67em;
+                margin-top: 1.25em;
+            }
         }
     }
 
     &__featuredImage {
-        width: 50%;
+        display: none;
+
+        @include tablet {
+            display: block;
+            width: 50%;
+        }
 
         #{$root}--singlePost & {
             width: 100%;

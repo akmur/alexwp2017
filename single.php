@@ -29,13 +29,22 @@ while ( have_posts() ) : the_post(); ?>
                     </h1>
                 </div>
             </div>
+            <div class="Heading__credits">
+                <?php 
+                    $photo_credits = get_field('photo_credits');
+                    if ($photo_credits) :
+                ?>
+                    <div class="PhotoCredits">
+                        <?php echo $photo_credits; ?>
+                    </div>
+                <?php 
+                    endif;
+                ?>
+            </div>
         </div>
     </div>
 
     <div class="Section">
-        <div class="PhotoCredits">
-            <?php the_field('photo_credits'); ?>
-        </div>
         <div class="Post">
             <?php the_content(); ?>
         </div>

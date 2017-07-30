@@ -3,12 +3,6 @@ const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 let devToolType;
 
-if (process.env.environment === 'dist') {
-  devToolType = 'source-map';
-} else {
-  devToolType = 'eval-source-map';
-}
-
 module.exports = {
   entry: './assets/js/src/main.js',
   output: {
@@ -25,12 +19,12 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
-          presets: ['es2015'],
+          presets: ['env'],
         },
       },
     ],
   },
-  devtool: devToolType,
+  devtool: 'eval-source-map',
   plugins: [
     new UnminifiedWebpackPlugin(),
   ],

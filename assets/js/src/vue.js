@@ -1,40 +1,47 @@
 var bus = new Vue();
 
+var siteUrl;
+var siteProtocol = location.protocol;
+var realSiteUrl = location.host;
+
+if (realSiteUrl === 'localhost:3000') {
+    siteUrl = siteProtocol + '//alexwp2017.dev';
+} else {
+    siteUrl = siteProtocol + '//' + realSiteUrl;
+}
+
 var store = {
-    debug: true,
-    siteUrl: 'http://alexwp2017.dev',
+    siteUrl: siteUrl,
     state: {
-        message: 'Load more',
-        page: 1,
-        totalPages: 1,
-        showPosts: true,
-        activePost: 0
+        offset: 0,
+        totalPages: 0
     },
-    getLoadingMessage() {
-        return this.state.message;
+    getOffset() {
+        return this.state.offset;
     },
-    setLoadingMessage(message) {
-        this.state.message = message;
+    setOffset(newValue) {
+        this.state.offset = newValue;
     },
-    getPageAction() {
-        return this.state.page;
+    getTotalPage() {
+        return this.state.totalPages;
     },
-    setPageAction(newValue) {
-        this.state.page = newValue;
-    },
-    setTotalPageAction(newValue) {
+    setTotalPage(newValue) {
         this.state.totalPages = newValue;
     }
 }
 
-Vue.component('post-heading-listing', {
+Vue.component('post-listing', {
     data: function(){
         return {
-            posts: []
+            message: 'Load More',
+            showButton: true,
+            posts: [],
+            showPosts: false,
+            isLastPage: false
         }
     },
     props: ['numberOfPosts'],
-    template: '#post-heading-template',
+    template: '#post-list-template',
     methods: {
         randomUnsplash: function(id) {
             var imageId = Math.floor(id / 5); // just because unsplash doesn't have 10k images and posts could have a > 10k ID
@@ -48,36 +55,35 @@ Vue.component('post-heading-listing', {
                 return this.randomUnsplash(post.id);
             }
         },
-        getPosts: function(offset) {
-            if (!offset) {
-                offset = 0;
-            }
+        getPosts: function() {
+            var offset = store.getOffset();
             this.$http.get(`${store.siteUrl}/wp-json/wp/v2/posts?_embed&page=1&per_page=${this.numberOfPosts}&offset=${offset}`).then(response => {
                 var postsArray = response.data;
                 // this will append the posts to the posts array
                 this.posts = this.posts.concat(postsArray);
+                // setting the button message
+                this.message = 'Load More';
+                // making sure the posts are displayed - they are false by default
+                this.showPosts = true;
+                // getting needed info to know if we are on the last page when infinite loading
                 var totalPages = response.headers.map['X-WP-TotalPages'][0];
-                store.setTotalPageAction(totalPages);
-                store.setLoadingMessage('Load More');
+                var currentPage = Math.floor(offset / 10) + 1;
+                if (currentPage === totalPages) {
+                    // if it is the last page, set this variable to true,
+                    // it will hide the loadmore button
+                    this.isLastPage = true;
+                }
             }, response => {
                 // error callback
             });
         },
         loadMore: function() {
-            // getting current image
-            var currentPage = store.getPageAction();
+            this.message = 'Loading...';
+            var currentOffset = store.getOffset();
             // setting the offset
-            var offset = currentPage * 10;
+            store.setOffset(currentOffset + 10);
             // getting posts (they will be appended)
-            this.getPosts(offset);
-            // increasing current page
-            store.setPageAction(currentPage + 1);
-        },
-        loadPost: function(id){
-            store.state.showPosts = false;
-            store.state.activePost = id;
-            bus.$emit('loadPost');
-            window.scrollTo(0, 0);
+            this.getPosts();
         }
     },
     created: function(){
@@ -88,58 +94,7 @@ Vue.component('post-heading-listing', {
     }
 });
 
-Vue.component('post-single', {
-    template: '#post-single-template',
-    data: function(){
-        return {
-            isActive: false,
-            post: ''
-        }
-    },
-    methods: {
-        style: function(post){
-            return `background: url(${post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url}) no-repeat center center / cover`
-        },
-        getSingle: function() {
-            this.$http.get(`${store.siteUrl}/wp-json/wp/v2/posts/${store.state.activePost}?_embed`).then(response => {
-                this.post = response.data;
-                this.isActive = true;
-                window.history.pushState({page: this.post.id}, this.post.title.rendered, this.post.slug);
-            }, response => {
-                // error callback
-            });
-        },
-    },
-    created: function() {
-        bus.$on('loadPost', this.getSingle);
-    }
-});
-
-Vue.component('posts-pagination', {
-    template: '#posts-pagination-template',
-    props: ['page', 'totalPages', 'message'],
-    methods: {
-        loadMore: function(){
-            bus.$emit('loadMore');
-            store.setLoadingMessage('Loading...');
-        },
-    }
-});
-
 var vm = new Vue({
     el: '#app',
     data: store.state
 })
-
-
-window.onpopstate = function(event) {
-    if (window.location.href === 'http://localhost:3000/posts/') {
-        store.state.showPosts = true;
-        store.state.activePost = 0;
-        window.scrollTo(0, 0);
-    } else {
-        store.state.showPosts = false;
-        store.state.activePost = 0;
-        window.location.reload();
-    }
-}

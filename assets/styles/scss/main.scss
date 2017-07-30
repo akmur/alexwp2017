@@ -9,25 +9,28 @@
 @import './04-elements/image.scss';
 @import './04-elements/link.scss';
 @import './04-elements/pre.scss';
+@import './04-elements/type.scss';
 
 @import './05-objects/comments.scss';
 @import './05-objects/section.scss';
-@import './05-objects/type.scss';
 @import './05-objects/pageListing.scss';
 @import './05-objects/post.scss';
 @import './05-objects/resume.scss';
+@import './05-objects/wrapper.scss';
 
-@import './06-components/breadcrumbs.scss';
+@import './06-components/button.scss';
 @import './06-components/card.scss';
 @import './06-components/featuredImage.scss';
 @import './06-components/footer.scss';
 @import './06-components/header.scss';
 @import './06-components/heading.scss';
-@import './06-components/list.scss';
 @import './06-components/hero.scss';
 @import './06-components/highlights.scss';
-@import './06-components/readmore.scss';
+@import './06-components/list.scss';
+@import './06-components/loadmore.scss';
 @import './06-components/photocredits.scss';
+@import './06-components/readmore.scss';
 @import './06-components/sectionTitle.scss';
+@import './06-components/spinner.scss';
 
 @import './07-utilities/utilities.scss';
