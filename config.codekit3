@@ -610,14 +610,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"\/package_alltasks.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/package_alltasks-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"\/page-about.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -646,6 +638,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page.php",
+		"oF": 0
+		},
+	"\/README.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/README.html",
 		"oF": 0
 		},
 	"\/README.md": {
@@ -704,16 +702,6 @@
 		"oA": 2,
 		"oAP": "\/single.php",
 		"oF": 0
-		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/template-parts\/content-none.php": {
 		"ft": 8192,
