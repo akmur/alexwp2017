@@ -88,9 +88,6 @@ Vue.component('post-listing', {
             this.getPosts();
         }
     },
-    created: function(){
-        bus.$on('loadMore', this.loadMore);
-    },
     mounted: function() {
         this.getPosts();
     }
