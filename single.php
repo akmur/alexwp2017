@@ -49,6 +49,16 @@ while ( have_posts() ) : the_post(); ?>
             <?php the_content(); ?>
         </div>
     </div>
+
+    <!-- <div class="Section">
+        <div class="Post">
+            <?php 
+                // if ( comments_open() || get_comments_number() ) :
+                    // comments_template();
+                // endif;
+            ?>
+        </div>
+    </div> -->
     <?php
 endwhile; // End of the loop.
 ?>

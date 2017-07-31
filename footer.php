@@ -11,25 +11,25 @@
 
 ?>
 
-    <div class="Section">
-        <div class="Footer">
-            <div class="Footer__container">
-                <p class="Footer__text">
-                    You can follow me on <a class="Footer__link Link" href="https://twitter.com/akmur">Twitter</a>, <a class="Footer__link Link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="Footer__link Link" href="https://github.com/akmur">Github</a>.
-                </p>
-                <p class="Footer__text">
-                    This website is built with <a class="Footer__link Link" href="https://wordpress.org">WordPress</a> and some 
-                    <a class="Footer__link Link" href="https://vuejs.org/">Vue.js</a>.
-                </p>
-                <p class="Footer__text">
-                    Fonts are <a href="https://github.com/JulietaUla/Montserrat" class="Footer__link Link">Montserrat</a> by Julieta Ulanovsky and Georgia by Matthew Carter. 
-                    Post images are often mostly from <a class="Footer__link Link" href="http://unsplash.it/">Unsplash</a>.
-                </p>
-            </div>
+</div> <!-- end app -->
+
+<div class="Section">
+    <div class="Footer">
+        <div class="Footer__container">
+            <p class="Footer__text">
+                You can find me on <a class="Footer__link Link" href="https://twitter.com/akmur">Twitter</a>, <a class="Footer__link Link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="Footer__link Link" href="https://github.com/akmur">Github</a>.
+            </p>
+            <p class="Footer__text">
+                This website is built with <a class="Footer__link Link" href="https://wordpress.org">WordPress</a> and some 
+                <a class="Footer__link Link" href="https://vuejs.org/">Vue.js</a>. Fonts are <a href="https://github.com/JulietaUla/Montserrat" class="Footer__link Link">Montserrat</a> by Julieta Ulanovsky and Georgia by Matthew Carter. 
+                Post images are often mostly from <a class="Footer__link Link" href="http://unsplash.it/">Unsplash</a>.
+            </p>
+            <p class="Footer__text">
+                <a href="https://twitter.com/akmur" class="twitter-follow-button" data-show-count="false">Follow @akmur</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>
         </div>
     </div>
-
-</div> <!-- end app -->
+</div>
 
 <script type="text/template" id="post-list-template">
     <div v-if="showPosts">

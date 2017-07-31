@@ -16,7 +16,7 @@
         margin-bottom: 1em;
 
         @include tablet {
-            @include font(serif, 1.5, 400);
+            @include font(serif, 1.25, 400);
         }
 
         &:last-child {

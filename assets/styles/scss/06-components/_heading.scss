@@ -46,11 +46,10 @@
 
         #{$root}--singlePost & {
             display: inline-block;
-            margin-top: -2rem;
             text-align: center;
 
             @include tablet {
-                margin-top: -15rem;
+                margin-top: -5rem;
                 position: relative;
             }
         }

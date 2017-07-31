@@ -19,7 +19,7 @@ get_header(); ?>
         <div class="Hero__quoteWrapper">
             <h1 class="Hero__quote">
                 Hi. I'm <span class="u-strong">Alessandro Muraro</span>. 
-                I'm a web developer specialized in coding modular sites and a passionate about maintainable code.<br>
+                I'm a web developer specialized in coding modular sites and passionate about writing maintainable code.<br>
                 I do frontend, web apps and I organise communities.
                 <a class="Hero__cta" href="/about">Learn more</a> 
                 <span class="Hero__quoteSmall">or</span> 
