@@ -1,7 +1,5 @@
 /* global document */
 
-var bus = new Vue();
-
 var siteProtocol = location.protocol;
 var realSiteUrl = location.host;
 var siteUrl = siteProtocol + '//' + realSiteUrl;
