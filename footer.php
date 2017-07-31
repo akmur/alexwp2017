@@ -65,29 +65,6 @@
     </div>
 </script>
 
-<script type="text/template" id="post-single-template">
-    <div v-if="isActive">
-        <div class="Section">
-            <div class="Heading Heading--singlePost" :style=style(post)>
-                <div class="Heading__titleGroup">
-                    <div class="Heading__titleGroupContent">
-                        <h1 class="Heading__title Title Title__h1">
-                            {{ post.title.rendered }}
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Section">
-            <div class="PhotoCredits">
-                {{ post.acf.photo_credits }}
-            </div>
-            <div class="Post" v-html="post.content.rendered">
-            </div>
-        </div>
-    </div>
-</script>
-
 <script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
 <script src="https://unpkg.com/vue-resource@1.3.4/dist/vue-resource.min.js"></script>
 
