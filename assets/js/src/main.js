@@ -2,15 +2,9 @@
 
 var bus = new Vue();
 
-var siteUrl;
 var siteProtocol = location.protocol;
 var realSiteUrl = location.host;
-
-if (realSiteUrl === 'localhost:3000') {
-    siteUrl = siteProtocol + '//alexwp2017.dev';
-} else {
-    siteUrl = siteProtocol + '//' + realSiteUrl;
-}
+var siteUrl = siteProtocol + '//' + realSiteUrl;
 
 var store = {
     siteUrl: siteUrl,
