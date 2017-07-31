@@ -16,12 +16,11 @@
     &__quote {
         @include font('sans', 1.5, 200);
         line-height: 1.5;
-        margin-top: -2rem;
+        margin-top: -2em;
         text-align: center;
 
         @include tablet {
-            @include font('sans', 2.5, 200);
-            margin: 0;
+            @include font('sans', 2.25, 200);
             text-align: left;
         }
 

@@ -50,15 +50,15 @@ while ( have_posts() ) : the_post(); ?>
         </div>
     </div>
 
-    <!-- <div class="Section">
-        <div class="Post">
+    <div class="Section">
+        <div class="Comments">
             <?php 
-                // if ( comments_open() || get_comments_number() ) :
-                    // comments_template();
-                // endif;
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
             ?>
         </div>
-    </div> -->
+    </div>
     <?php
 endwhile; // End of the loop.
 ?>

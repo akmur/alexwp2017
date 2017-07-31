@@ -1,7 +1,9 @@
 .LoadMore {
+    font-size: 1em;
     padding: 0;
 
     @include tablet {
+        font-size: 1.5em;
         padding: 8rem 0;
     }
 }

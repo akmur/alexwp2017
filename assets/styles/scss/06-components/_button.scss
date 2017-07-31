@@ -1,17 +1,18 @@
-.Button {
+%Button {
     @extend %Link;
-    @include font(sans, 1.5, 300);
+    @include font(sans, 1, 300);
     background: palette(primary);
     border: 0 !important;
     color: palette(light);
     display: block;
-    padding: 1rem;
+    font-size: 1em;
+    padding: 1em;
     transition: $transition;
 
     @include tablet {
         background: palette(primary);
         display: inline-block;
-        padding: 1rem 2rem;
+        padding: 0.5em 2em;
     }
 
     &:hover,
@@ -19,4 +20,8 @@
         background: palette(primary, low);
         color: palette(light);
     }
+}
+
+.Button {
+    @extend %Button;
 }
