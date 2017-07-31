@@ -648,12 +648,6 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
-	"\/phpcs.xml.dist": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/phpcs.xml.dist",
-		"oF": 0
-		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,

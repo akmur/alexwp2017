@@ -47,5 +47,7 @@ Thumbs.db
 *.tar
 *.zip
 
+config.codekit3
+
 # ignore node/grunt dependency directories
 node_modules/
