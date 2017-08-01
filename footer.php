@@ -24,9 +24,6 @@
                 <a class="Footer__link Link" href="https://vuejs.org/">Vue.js</a>. Fonts are <a href="https://github.com/JulietaUla/Montserrat" class="Footer__link Link">Montserrat</a> by Julieta Ulanovsky and Georgia by Matthew Carter. 
                 Post images are often mostly from <a class="Footer__link Link" href="http://unsplash.it/">Unsplash</a>.
             </p>
-            <p class="Footer__text">
-                <a href="https://twitter.com/akmur" class="twitter-follow-button" data-show-count="false">Follow @akmur</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </p>
         </div>
     </div>
 </div>
