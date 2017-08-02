@@ -23,19 +23,9 @@ get_header(); ?>
         </div>
         <div class="Heading__featuredImage">
             <picture>
-                <source
-                    media="(min-width: 650px)"
-                    srcset="https://unsplash.it/800/800?image=910,
-                            https://unsplash.it/800/800?image=910 2x">
-                <source
-                    media="(min-width: 465px)"
-                    srcset="https://unsplash.it/800/800?image=910,
-                            https://unsplash.it/800/800?image=910 2x">
                 <img
-                    src="https://unsplash.it/800/800?image=910"
-                    srcset="https://unsplash.it/800/800?image=910,
-                            https://unsplash.it/800/800?image=910 2x"
-                    alt="a cute kitten">
+                    src="http://alexmuraro.me/wp-content/uploads/2017/08/about.jpg"
+                    alt="Alessandro Muraro - Frontend developer">
             </picture>
         </div>
     </div>
@@ -69,17 +59,12 @@ get_header(); ?>
             <h3 class="Post__title">Communities</h3>
             <ul class="List">
                 <li class="List__item">
-                    <a class="Link" href="http://navabi.de" target="blank">Milano Frontend Meetup</a><br>
+                    <a class="Link" href="http://milanofrontend.it" target="blank">Milano Frontend Meetup</a><br>
                     Since October 2015
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Aachen Web Makers Meetup</a><br>
+                    <a class="Link" href="https://www.meetup.com/it-IT/Aachen-Web-Makers-Meetup/" target="blank">Aachen Web Makers Meetup</a><br>
                     Since June 2017
-                </li>
-            </ul>
-            <h3 class="Post__title">Favourite Quote</h3>
-            <ul class="List">
-                <li class="List__item">"Be conservative in what you do, be liberal in what you accept from others." - <a class="Link" href="https://en.wikipedia.org/wiki/Robustness_principle" target="blank">Jon Postel</a>
                 </li>
             </ul>
         </div>
@@ -97,29 +82,34 @@ get_header(); ?>
             <h3 class="Post__title">Main Work Experience</h3>
             <ul class="List">
                 <li class="List__item">
-                    <a class="Link" href="http://navabi.de" target="blank">navabi GmbH</a><br>
+                    <a class="Link" href="http://navabi.de" target="blank">navabi GmbH</a> (DE)<br>
                     Frontend developer<br>
                     Since April 2017
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a><br>
+                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a> (IT)<br>
                     Frontend developer<br>
                     November 2015 to April 2017
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a><br>
+                    <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a> (IT)<br>
                     Frontend developer<br>
                     June 2014 to November 2015
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a><br>
+                    <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a> (IT)<br>
                     Frontend developer / UX / UI<br>
                     September 2011 to May 2014
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.apple.com" target="blank">Apple</a><br>
+                    <a class="Link" href="http://www.apple.com" target="blank">Apple</a> (IRL)<br>
                     Tech support<br>
-                    2002 to 2007
+                    2003 to 2007
+                </li>
+                <li class="List__item">
+                    <a class="Link" href="http://www.unisys.com" target="blank">Unisys</a> (NL)<br>
+                    Tech support<br>
+                    2001 to 2003
                 </li>
             </ul>
         </div>
@@ -164,49 +154,50 @@ get_header(); ?>
             <h3 class="Post__title">Main Work Experience</h3>
             <ul class="List">
                 <li class="List__item">
-                    <a class="Link" href="http://navabi.de" target="blank">navabi GmbH</a><br>
+                    <a class="Link" href="http://navabi.de" target="blank">navabi GmbH</a> (DE)<br>
                     Frontend developer<br>
                     Since April 2017
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a><br>
+                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a> (IT)<br>
                     Frontend developer<br>
                     November 2015 to April 2017
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a><br>
+                    <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a> (IT)<br>
                     Frontend developer<br>
                     June 2014 to November 2015
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a><br>
+                    <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a> (IT)<br>
                     Frontend developer / UX / UI<br>
                     September 2011 to May 2014
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.apple.com" target="blank">Apple</a><br>
+                    <a class="Link" href="http://www.apple.com" target="blank">Apple</a> (IRL)<br>
                     Tech support<br>
-                    2002 to 2007
+                    2003 to 2007
+                </li>
+                <li class="List__item">
+                    <a class="Link" href="http://www.unisys.com" target="blank">Unisys</a> (NL)<br>
+                    Tech support<br>
+                    2001 to 2003
                 </li>
             </ul>
             <h3 class="Post__title">Communities</h3>
             <ul class="List">
                 <li class="List__item">
-                    <a class="Link" href="http://navabi.de" target="blank">Milano Frontend Meetup</a><br>
+                    <a class="Link" href="http://milanofrontend.it" target="blank">Milano Frontend Meetup</a><br>
                     Since October 2015
                 </li>
                 <li class="List__item">
-                    <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Aachen Web Makers Meetup</a><br>
+                    <a class="Link" href="https://www.meetup.com/it-IT/Aachen-Web-Makers-Meetup/" target="blank">Aachen Web Makers Meetup</a><br>
                     Since June 2017
-                </li>
-            </ul>
-            <h3 class="Post__title">Favourite Quote</h3>
-            <ul class="List">
-                <li class="List__item">"Be conservative in what you do, be liberal in what you accept from others." - <a class="Link" href="https://en.wikipedia.org/wiki/Robustness_principle" target="blank">Jon Postel</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+
 <?php
 get_footer();
