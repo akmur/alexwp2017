@@ -49,5 +49,5 @@ Thumbs.db
 
 *.codekit3
 
-# ignore node/grunt dependency directories
+# ignore node dependencies
 node_modules/
