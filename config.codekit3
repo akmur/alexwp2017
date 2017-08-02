@@ -524,12 +524,6 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
-	"\/footer.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/footer.php",
-		"oF": 0
-		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -609,12 +603,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
-		},
-	"\/page-about.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/page-about.php",
-		"oF": 0
 		},
 	"\/page-contact.php": {
 		"ft": 8192,
