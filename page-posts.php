@@ -14,9 +14,7 @@
 
 get_header(); ?>
 
-<div class="PageListing">
-    <post-listing :number-of-posts=10></post-listing>
-</div>
+<div id="PageListing" data-posts-number="10" class="PageListing"></div>
 
 <?php
 get_footer();

@@ -63,41 +63,11 @@
 		"sC": 0,
 		"tS": 1
 		},
-	"\/assets\/js\/src\/vendor\/jquery-1.12.0.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/src\/vendor\/jquery-1.12.0.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/js\/src\/vendor\/modernizr-2.8.3.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/src\/vendor\/modernizr-2.8.3.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/js\/src\/vendor\/vue-resource.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/src\/vendor\/vue-resource.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/js\/src\/vendor\/vue.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/src\/vendor\/vue.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
+	"\/assets\/js\/src\/main.js.old": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/js\/src\/main.js.old",
+		"oF": 0
 		},
 	"\/assets\/styles\/css\/main.css": {
 		"aP": 1,
@@ -524,6 +494,12 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
+	"\/footer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/footer.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -603,6 +579,12 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/page-about.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-about.php",
+		"oF": 0
 		},
 	"\/page-contact.php": {
 		"ft": 8192,

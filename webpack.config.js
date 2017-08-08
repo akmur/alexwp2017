@@ -1,5 +1,4 @@
 const path = require('path');
-const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 let devToolType;
 
@@ -24,8 +23,5 @@ module.exports = {
       },
     ],
   },
-  devtool: 'eval-source-map',
-  plugins: [
-    new UnminifiedWebpackPlugin(),
-  ],
+  devtool: 'eval-source-map'
 };

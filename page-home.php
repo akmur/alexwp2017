@@ -38,7 +38,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <post-listing :number-of-posts=3></post-listing>
+    <div id="PageListing" data-posts-number="3" class="PageListing"></div>
 
     <div class="Section Section--readMore u-center">
         <a class="Button" href="/posts">Read more</a>
