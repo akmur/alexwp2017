@@ -54,7 +54,12 @@
     </div>
 </script>
 
-<script src="assets/js/dist/main.bundle.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?callback=polyfillsAreLoaded";; defer async></script>
+<script>
+  function polyfillsAreLoaded() {
+    console.log('loaded');
+  }
+</script>
 
 <?php wp_footer(); ?>
 

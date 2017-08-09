@@ -131,7 +131,7 @@ if( function_exists('acf_add_options_page') ) {
  */
 function alex2017_scripts() {
 	wp_enqueue_style( 'alex2017-style', get_template_directory_uri() . '/assets/styles/css/main.css' );
-	wp_enqueue_script( 'alex2017-script', get_template_directory_uri() . '/assets/js/dist/main.min.js', [], false, true );
+	wp_enqueue_script( 'alex2017-script', get_template_directory_uri() . '/assets/js/dist/main.bundle.js', [], false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

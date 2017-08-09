@@ -52,9 +52,7 @@ const app = (function () {
             return response.json();
         }).then(function(json) {
             console.log('parsed json', json);
-            const postsArray = json.data;
             // buildHTML
-            // append the html to the container
             // reset message to default
             Store.state.message = 'Load More';
             // find out if we are on the last page
