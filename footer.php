@@ -28,39 +28,6 @@
     </div>
 </div>
 
-<script type="text/template" id="post-list-template">
-    <div v-if="showPosts">
-        <div class="PostsList">
-            <a class="Section Section--link" :href=post.link v-for="(post, index) in posts">
-                <div :class="(index + 1) % 2 === 0 ? 'Heading' : 'Heading Heading--alt'">
-                    <div class="Heading__titleGroup">
-                        <div class="Heading__titleGroupContent">
-                            <h1 class="Section__title Title Title__h1">{{ post.title.rendered }}</h1>
-                        </div>
-                    </div>
-                    <div class="Heading__featuredImage">
-                        <picture>
-                            <img
-                                :src=image(post)
-                                :alt=post.title.rendered>
-                        </picture>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="LoadMore u-center" v-if="numberOfPosts > 3 && !isLastPage">
-            <a href="#" class="Button" @click.prevent="loadMore">{{ message }}</a>
-        </div>
-    </div>
-</script>
-
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?callback=polyfillsAreLoaded";; defer async></script>
-<script>
-  function polyfillsAreLoaded() {
-    console.log('loaded');
-  }
-</script>
-
 <?php wp_footer(); ?>
 
 </body>

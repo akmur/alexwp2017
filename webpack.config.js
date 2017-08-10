@@ -9,19 +9,9 @@ module.exports = {
     filename: 'js/dist/main.bundle.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        include: [
-          path.resolve(__dirname, 'src/js'),
-        ],
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['env'],
-        },
-      },
-    ],
+    loaders: [
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+    ]
   },
-  devtool: 'eval-source-map'
+  devtool: 'eval'
 };

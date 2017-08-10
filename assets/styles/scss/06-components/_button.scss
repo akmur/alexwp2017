@@ -1,11 +1,9 @@
 %Button {
     @extend %Link;
-    @include font(sans, 1, 300);
+    @include font(sans, 1.5, 300);
     background: palette(primary);
-    border: 0 !important;
     color: palette(light);
     display: block;
-    font-size: 1em;
     padding: 1em;
     transition: $transition;
 

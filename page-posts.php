@@ -16,5 +16,9 @@ get_header(); ?>
 
 <div id="PageListing" data-posts-number="10" class="PageListing"></div>
 
+<div class="LoadMore u-center">
+    <button class="Button" id="loadMore">Load More...</button>
+</div>
+
 <?php
 get_footer();
