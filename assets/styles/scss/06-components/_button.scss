@@ -2,6 +2,7 @@
     @extend %Link;
     @include font(sans, 1.5, 300);
     background: palette(primary);
+    border: 0 !important;
     color: palette(light);
     display: block;
     padding: 1em;
