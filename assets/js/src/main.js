@@ -56,7 +56,7 @@ const app = (function(){
             const PostClass = index % 2 === 0 ? 'Heading' : 'Heading Heading--alt';
             return `
                 <div class="PostsList">
-                    <a class="Section Section--link" href=${post.link}">
+                    <a class="Section Section--link" href="${post.link}">
                         <div class="${PostClass}">
                             <div class="Heading__titleGroup">
                                 <div class="Heading__titleGroupContent">
@@ -65,7 +65,7 @@ const app = (function(){
                             </div>
                             <div class="Heading__featuredImage">
                                 <picture>
-                                    <img src=${PostImage} alt=${post.title.rendered}>
+                                    <img src="${PostImage}" alt="${post.title.rendered}">
                                 </picture>
                             </div>
                         </div>
