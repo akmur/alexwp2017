@@ -21,7 +21,7 @@
             </p>
             <p class="Footer__text">
                 This website is built with <a class="Footer__link Link" href="https://wordpress.org">WordPress</a> and some 
-                <a class="Footer__link Link" href="https://vuejs.org/">Vue.js</a>. Fonts are <a href="https://github.com/JulietaUla/Montserrat" class="Footer__link Link">Montserrat</a> by Julieta Ulanovsky and Georgia by Matthew Carter. 
+                <a class="Footer__link Link" href="http://vanilla-js.com/">Vanilla JS</a>. Fonts are <a href="https://github.com/JulietaUla/Montserrat" class="Footer__link Link">Montserrat</a> by Julieta Ulanovsky and Georgia by Matthew Carter. 
                 Post images are mostly from <a class="Footer__link Link" href="http://unsplash.it/">Unsplash</a>.<br>The source code of this website is <a class="Footer__link Link" href="https://github.com/akmur/alexwp2017">available on Github</a>.
             </p>
         </div>
