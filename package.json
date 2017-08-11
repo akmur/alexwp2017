@@ -14,10 +14,10 @@
     "clean:css": "cleancss --compatibility ie9 -o ./assets/styles/css/main.css ./assets/styles/css/main.css",
     "dev": "npm run firstrun & npm run watch:all & npm run browsersync",
     "dist": "npm run build:js && npm run build:css && npm run autoprefixer && npm run mqpacker && npm run clean:css",
-    "mqpacker": "mqpacker -s ./assets/styles/css/main.css ./dist/css/main.css",
+    "mqpacker": "mqpacker -s ./assets/styles/css/main.css ./assets/styles/css/main.css",
     "firstrun": "npm run build:css && npm run build:js",
     "watch:all": "npm-run-all -p watch:css watch:js",
-    "watch:css": "onchange './assets/styles/src/scss/*' -- npm run build:css",
+    "watch:css": "onchange './assets/styles/scss/**/*.scss' -- npm run build:css",
     "watch:js": "onchange './assets/js/src/*' -- npm run build:js"
   },
   "author": "Alessandro Muraro <akmuraro@gmail.com>",

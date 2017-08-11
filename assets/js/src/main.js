@@ -55,7 +55,6 @@ const app = (function(){
             const PostImage = getImage(post);
             const PostClass = index % 2 === 0 ? 'Heading' : 'Heading Heading--alt';
             return `
-                <div class="PostsList">
                     <a class="Section Section--link" href="${post.link}">
                         <div class="${PostClass}">
                             <div class="Heading__titleGroup">
@@ -70,7 +69,6 @@ const app = (function(){
                             </div>
                         </div>
                     </a>
-                </div>
                 `;
         });
         element.insertAdjacentHTML('beforeend', PostsHTML.join(''));

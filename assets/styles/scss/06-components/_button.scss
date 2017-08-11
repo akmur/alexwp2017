@@ -7,11 +7,13 @@
     display: block;
     padding: 1em;
     transition: $transition;
+    width: 100%;
 
     @include tablet {
         background: palette(primary);
         display: inline-block;
         padding: 0.5em 2em;
+        width: auto;
     }
 
     &:hover,
