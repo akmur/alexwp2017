@@ -1,7 +1,5 @@
 const path = require('path');
 
-let devToolType;
-
 module.exports = {
   entry: './assets/js/src/main.js',
   output: {
