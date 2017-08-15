@@ -6,17 +6,5 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/dist/main.bundle.js',
   },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env']
-        }
-      }
-    ]
-  },
   devtool: 'source-map'
 };

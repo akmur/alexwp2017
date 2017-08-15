@@ -1,136 +1,121 @@
+'use strict';
+
 /* global require location document */
 
-const axios = require('axios');
+var axios = require('axios');
 
-const SiteProtocol = location.protocol;
-const RealSiteUrl = location.host;
-const SiteUrl = SiteProtocol + '//' + RealSiteUrl;
+var SiteProtocol = location.protocol;
+var RealSiteUrl = location.host;
+var SiteUrl = SiteProtocol + '//' + RealSiteUrl;
 
-const Store = {
+var Store = {
     siteUrl: SiteUrl,
     state: {
         message: '',
         offset: 0,
         totalPages: 0
     },
-    getMessage(){
+    getMessage: function getMessage() {
         return this.state.message;
     },
-    setMessage(newValue){
+    setMessage: function setMessage(newValue) {
         this.state.message = newValue;
     },
-    getOffset(){
+    getOffset: function getOffset() {
         return this.state.offset;
     },
-    setOffset(newValue){
+    setOffset: function setOffset(newValue) {
         this.state.offset = newValue;
     },
-    getTotalPages(){
+    getTotalPages: function getTotalPages() {
         return this.state.totalPages;
     },
-    setTotalPages(newValue){
+    setTotalPages: function setTotalPages(newValue) {
         this.state.totalPages = newValue;
     }
 };
 
-const app = (function(){
+var app = function () {
 
     // private
-    function randomUnsplash(id){
-        const imageId = Math.floor(id / 5); // just because unsplash doesn't have 10k images and posts could have a > 10k ID
-        const imageUrl = `https://unsplash.it/700/700?image=${imageId}`;
+    function randomUnsplash(id) {
+        var imageId = Math.floor(id / 5); // just because unsplash doesn't have 10k images and posts could have a > 10k ID
+        var imageUrl = 'https://unsplash.it/700/700?image=' + imageId;
         return imageUrl;
     }
 
-    function getImage(post){
-        if (post._embedded['wp:featuredmedia']){
+    function getImage(post) {
+        if (post._embedded['wp:featuredmedia']) {
             return post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
         } else {
             return randomUnsplash(post.id);
         }
     }
 
-    function buildHTML(element, response){
-        const PostsHTML = response.data.map((post, index) => {
-            const PostImage = getImage(post);
-            const PostClass = index % 2 === 0 ? 'Heading' : 'Heading Heading--alt';
-            return `
-                    <a class="Section Section--link" href="${post.link}">
-                        <div class="${PostClass}">
-                            <div class="Heading__titleGroup">
-                                <div class="Heading__titleGroupContent">
-                                    <h1 class="Section__title Title Title__h1">${post.title.rendered}</h1>
-                                </div>
-                            </div>
-                            <div class="Heading__featuredImage">
-                                <picture>
-                                    <img src="${PostImage}" alt="${post.title.rendered}">
-                                </picture>
-                            </div>
-                        </div>
-                    </a>
-                `;
+    function buildHTML(element, response) {
+        var PostsHTML = response.data.map(function (post, index) {
+            var PostImage = getImage(post);
+            var PostClass = index % 2 === 0 ? 'Heading' : 'Heading Heading--alt';
+            return '\n                    <a class="Section Section--link" href="' + post.link + '">\n                        <div class="' + PostClass + '">\n                            <div class="Heading__titleGroup">\n                                <div class="Heading__titleGroupContent">\n                                    <h1 class="Section__title Title Title__h1">' + post.title.rendered + '</h1>\n                                </div>\n                            </div>\n                            <div class="Heading__featuredImage">\n                                <picture>\n                                    <img src="' + PostImage + '" alt="' + post.title.rendered + '">\n                                </picture>\n                            </div>\n                        </div>\n                    </a>\n                ';
         });
         element.insertAdjacentHTML('beforeend', PostsHTML.join(''));
     }
 
-    function getPosts(selector){
-        const Element = document.querySelector(selector);
-        const NumberOfPosts = Element.getAttribute('data-posts-number');
-        const Offset = Store.getOffset();
-        axios.get(`${Store.siteUrl}/wp-json/wp/v2/posts?_embed&page=1&per_page=${NumberOfPosts}&offset=${Offset}`)
-            .then(response => {
-                // buildHTML
-                buildHTML(Element, response);
-                // reset message to default
-                Store.setMessage('Load More...');
-                setButtonMessage();
-                // set total pages number
-                Store.setTotalPages(response.headers['x-wp-totalpages'][0]);
-                // find out if we are on the last page
-                hideLoadMore();
-            }).catch(function(ex){
-                console.log('parsing failed', ex);
-            })
+    function getPosts(selector) {
+        var Element = document.querySelector(selector);
+        var NumberOfPosts = Element.getAttribute('data-posts-number');
+        var Offset = Store.getOffset();
+        axios.get(Store.siteUrl + '/wp-json/wp/v2/posts?_embed&page=1&per_page=' + NumberOfPosts + '&offset=' + Offset).then(function (response) {
+            // buildHTML
+            buildHTML(Element, response);
+            // reset message to default
+            Store.setMessage('Load More...');
+            setButtonMessage();
+            // set total pages number
+            Store.setTotalPages(response.headers['x-wp-totalpages'][0]);
+            // find out if we are on the last page
+            hideLoadMore();
+        }).catch(function (ex) {
+            console.log('parsing failed', ex);
+        });
     }
 
-    function hideLoadMore(){
-        const TotalPages = Store.getTotalPages();
-        const CurrentPage = Math.floor(Store.state.offset / 10) + 1;
-        if (CurrentPage == TotalPages){
+    function hideLoadMore() {
+        var TotalPages = Store.getTotalPages();
+        var CurrentPage = Math.floor(Store.state.offset / 10) + 1;
+        if (CurrentPage == TotalPages) {
             document.getElementById('loadMore').parentNode.style.display = 'none';
         }
     }
 
-    function setButtonMessage(){
-        const loadMoreButton = document.querySelector('#loadMore');
+    function setButtonMessage() {
+        var loadMoreButton = document.querySelector('#loadMore');
         if (loadMoreButton) {
             loadMoreButton.innerText = Store.getMessage();
         }
     }
 
-    function loadMore(){
-        const currentOffset = Store.getOffset();
+    function loadMore() {
+        var currentOffset = Store.getOffset();
         Store.setOffset(currentOffset + 10);
         Store.setMessage('Loading...');
         setButtonMessage();
         getPosts('#PageListing');
     }
 
-    function init(){
+    function init() {
         getPosts('#PageListing');
     }
 
     // making functions available to outside world
     return {
-        init,
-        loadMore
+        init: init,
+        loadMore: loadMore
     };
-
-})();
+}();
 
 app.init();
-const loadMoreButton = document.querySelector('#loadMore');
+var loadMoreButton = document.querySelector('#loadMore');
 if (loadMoreButton) {
     loadMoreButton.addEventListener('click', app.loadMore, false);
 }
