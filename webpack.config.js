@@ -3,13 +3,20 @@ const path = require('path');
 module.exports = {
   entry: './assets/js/src/main.js',
   output: {
-    path: path.resolve(__dirname, 'assets'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'js/dist/main.bundle.js',
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env']
+        }
+      }
     ]
   },
-  devtool: 'eval'
+  devtool: 'source-map'
 };
