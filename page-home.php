@@ -38,9 +38,9 @@ get_header(); ?>
         </div>
     </div>
 
-    <div id="PageListing" data-posts-number="3" class="PageListing"></div>
+    <div id="PageListing" data-posts-number="3" class="PageListing PageListing--home"></div>
 
-    <div class="Section Section--readMore u-center">
+    <div class="LoadMore u-center">
         <a class="Button" href="/posts">Read more</a>
     </div>
 </div>
