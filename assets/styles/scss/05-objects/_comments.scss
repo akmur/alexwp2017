@@ -175,7 +175,7 @@
         margin-bottom: 0;
     }
 
-    .comment.even.depth-1  {
+    .comment.thread-even.depth-1  {
         background: lighten(palette(light, high), 4%);
 
         &:last-child {
@@ -183,7 +183,7 @@
         }
     }
 
-    .comment.odd.depth-1 {
+    .comment.thread-odd.depth-1 {
         background: lighten(palette(light, high), 8%);
 
         &:last-child {
