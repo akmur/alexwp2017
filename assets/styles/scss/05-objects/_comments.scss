@@ -203,4 +203,8 @@
     input[type='url'] {
         background: #fff;
     }
+
+    #cancel-comment-reply-link {
+        @extend %Link;
+    }
 }
