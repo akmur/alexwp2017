@@ -1,10 +1,22 @@
-const path = require('path');
+/* global module process */
+
+let devToolType = process.env.NODE_ENV === 'dev' ? 'eval-source-map' : 'nosources-source-map';
 
 module.exports = {
-  entry: './assets/js/dist/main.babel.js',
+  entry: './assets/js/src/main.js',
   output: {
-    path: path.resolve(__dirname, 'assets'),
-    filename: 'js/dist/main.bundle.js',
+    filename: './assets/js/dist/main.bundle.js'
   },
-  devtool: 'source-map'
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env']
+        }
+      }
+    ]
+  },
+  devtool: devToolType
 };
