@@ -14,7 +14,7 @@
         margin-bottom: 1.5em;
         margin-top: 0;
         @include tablet {
-            @include font(sans, 1.5, 300);
+            @include font(sans, 1.25, 300);
         }
     }
 
@@ -27,9 +27,10 @@
         padding: 0;
     }
 
-    .comments-title {
+    .comments-title,
+    .comment-reply-title {
         font-size: 20px;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-bottom: 1.5em;
     }
 
@@ -38,6 +39,14 @@
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+
+    .comment-list {
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 4rem;
+        }
     }
 
     .comment-list li:before {
@@ -88,12 +97,16 @@
     .comment-body {
         color: #333;
         font-size: 14px;
-        font-size: 0.875rem;
-        margin-bottom: 4em;
+        font-size: 0.75rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .comment-reply-link {
         @extend .Button;
+        font-size: 1.25em !important;
     }
 
     .comment-reply-link .icon {
@@ -139,5 +152,68 @@
 
     label {
         @include font(sans, 1.25, 400);
+    }
+
+    .comment-list {
+        border: 1px solid palette(primary);
+    }
+
+    .comment-list .children {
+        margin-left: 2rem;
+    }
+
+    .comment-body {
+        margin: 0;
+        padding: 2rem 4rem;
+    }
+
+    ol.children {
+        border-top: 1px solid palette(primary, low);
+    }
+
+    li.comment.depth-1 {
+        border-bottom: 1px solid palette(primary);
+    }
+
+    .comment {
+        padding: 0 2rem;
+        margin-bottom: 0;
+    }
+
+    .comment.thread-even.depth-1  {
+        background: lighten(palette(light, high), 4%);
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    .comment.thread-odd.depth-1 {
+        background: lighten(palette(light, high), 8%);
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    .comment-respond {
+        background: lighten(palette(light, high), 4%);
+        border: 1px solid palette(primary);
+        padding: 4rem 4rem 2rem;
+    }
+
+    textarea,
+    input[type='text'],
+    input[type='email'],
+    input[type='url'] {
+        background: #fff;
+    }
+
+    #cancel-comment-reply-link {
+        @extend %Link;
+        font-weight: 300;
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1rem;
     }
 }

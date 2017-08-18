@@ -118,7 +118,9 @@ const app = (function(){
     }
 
     function init(){
-        getPosts('#PageListing');
+        if (document.querySelector('#PageListing')) {
+            getPosts('#PageListing');
+        }
     }
 
     // making functions available to outside world
