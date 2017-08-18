@@ -1,5 +1,10 @@
 .Comments {
     @extend %Wrapper;
+    padding: 0 2rem 3rem;
+
+    @include tablet {
+        padding: 0 2rem 6rem;
+    }
 
     p,
     ul,
@@ -19,7 +24,7 @@
 
     #comments {
         clear: both;
-        padding: 2em 0 0.5em;
+        padding: 0;
     }
 
     .comments-title {
