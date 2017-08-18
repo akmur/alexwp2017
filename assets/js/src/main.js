@@ -118,10 +118,11 @@ const app = (function(){
     }
 
     function init(){
-        if (document.querySelector('#PageListing')) {
+        const loadMoreButton = document.querySelector('#loadMore');
+        const pageListing = document.querySelector('#PageListing');
+        if (pageListing) {
             getPosts('#PageListing');
         }
-        const loadMoreButton = document.querySelector('#loadMore');
         if (loadMoreButton) {
             loadMoreButton.addEventListener('click', loadMore, false);
         }
