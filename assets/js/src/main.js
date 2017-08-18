@@ -123,7 +123,7 @@ const app = (function(){
         }
         const loadMoreButton = document.querySelector('#loadMore');
         if (loadMoreButton) {
-            loadMoreButton.addEventListener('click', app.loadMore, false);
+            loadMoreButton.addEventListener('click', loadMore, false);
         }
     }
 
