@@ -1,9 +1,9 @@
 .Comments {
     @extend %Wrapper;
-    padding: 0 2rem 3rem;
+    padding: 0 2rem 3rem !important;
 
     @include tablet {
-        padding: 0 2rem 6rem;
+        padding: 0 2rem 6rem !important;
     }
 
     p,

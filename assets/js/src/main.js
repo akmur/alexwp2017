@@ -121,6 +121,10 @@ const app = (function(){
         if (document.querySelector('#PageListing')) {
             getPosts('#PageListing');
         }
+        const loadMoreButton = document.querySelector('#loadMore');
+        if (loadMoreButton) {
+            loadMoreButton.addEventListener('click', app.loadMore, false);
+        }
     }
 
     // making functions available to outside world
@@ -132,7 +136,3 @@ const app = (function(){
 })();
 
 app.init();
-const loadMoreButton = document.querySelector('#loadMore');
-if (loadMoreButton) {
-    loadMoreButton.addEventListener('click', app.loadMore, false);
-}
