@@ -129,8 +129,7 @@ const app = (function(){
 
     // making functions available to outside world
     return {
-        init,
-        loadMore
+        init
     };
 
 })();

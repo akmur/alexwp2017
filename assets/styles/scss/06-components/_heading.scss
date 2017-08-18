@@ -38,7 +38,7 @@
         text-align: center;
         width: 100%;
 
-        @include tablet {
+        @include desktop {
             padding: 4em;
             text-align: right;
             width: 50%;
