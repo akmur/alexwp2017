@@ -70,6 +70,10 @@
         background: rgba(palette(light), 0.8);
         padding: 2rem;
 
+        @include tablet {
+            padding: 2 4rem;
+        }
+
         #{$root}--singlePost & {
             padding: 1rem;
         }
