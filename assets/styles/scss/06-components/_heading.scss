@@ -34,27 +34,28 @@
     }
 
     &__titleGroup {
-        padding: 2em;
         text-align: center;
-        width: 100%;
 
         @include tablet {
-            padding: 2em;
             text-align: right;
             width: 100%;
         }
 
-        @include desktop {
-            padding: 4em;
-        }
-
         #{$root}--singlePost & {
             display: inline-block;
+            padding: 2em;
             text-align: center;
 
             @include tablet {
                 margin-top: -5rem;
+                padding: 2em;
                 position: relative;
+                width: 100%;
+            }
+
+            @include desktop {
+                padding: 4em;
+                width: 75%;
             }
         }
 
@@ -67,7 +68,11 @@
 
     &__titleGroupContent {
         background: rgba(palette(light), 0.8);
-        padding: 1rem;
+        padding: 2rem;
+
+        #{$root}--singlePost & {
+            padding: 1rem;
+        }
     }
 
     &__title {
@@ -99,7 +104,7 @@
 
         @include tablet {
             display: block;
-            width: 50%;
+            width: 100%;
         }
 
         #{$root}--singlePost & {

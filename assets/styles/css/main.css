@@ -690,9 +690,10 @@ h6,
     padding: 0; }
   .Comments .comments-title,
   .Comments .comment-reply-title {
-    font-size: 20px;
-    font-size: 1.5rem;
-    margin-bottom: 1.5em; }
+    font-family: "Montserrat", sans;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1em; }
   .Comments .comment-list,
   .Comments .comment-list .children {
     list-style: none;
@@ -774,7 +775,7 @@ h6,
   .Comments label {
     font-family: "Montserrat", sans;
     font-size: 1.25rem;
-    font-weight: 400; }
+    font-weight: 300; }
   .Comments .comment-list {
     border: 1px solid #2c8898; }
   .Comments .comment-list .children {
@@ -1118,30 +1119,33 @@ h6,
       .Heading__credits {
         display: block; } }
   .Heading__titleGroup {
-    padding: 2em;
-    text-align: center;
-    width: 100%; }
+    text-align: center; }
     @media (min-width: 650px) {
       .Heading__titleGroup {
-        padding: 2em;
         text-align: right;
         width: 100%; } }
-    @media (min-width: 1024px) {
-      .Heading__titleGroup {
-        padding: 4em; } }
     .Heading--singlePost .Heading__titleGroup {
       display: inline-block;
+      padding: 2em;
       text-align: center; }
       @media (min-width: 650px) {
         .Heading--singlePost .Heading__titleGroup {
           margin-top: -5rem;
-          position: relative; } }
+          padding: 2em;
+          position: relative;
+          width: 100%; } }
+      @media (min-width: 1024px) {
+        .Heading--singlePost .Heading__titleGroup {
+          padding: 4em;
+          width: 75%; } }
     @media (min-width: 650px) {
       .Heading--alt .Heading__titleGroup {
         text-align: left; } }
   .Heading__titleGroupContent {
     background: rgba(249, 249, 249, 0.8);
-    padding: 1rem; }
+    padding: 2rem; }
+    .Heading--singlePost .Heading__titleGroupContent {
+      padding: 1rem; }
   .Heading--singlePost .Heading__title {
     color: #4a4a4a;
     display: inline-block;
@@ -1167,7 +1171,7 @@ h6,
     @media (min-width: 650px) {
       .Heading__featuredImage {
         display: block;
-        width: 50%; } }
+        width: 100%; } }
     .Heading--singlePost .Heading__featuredImage {
       width: 100%; }
 
