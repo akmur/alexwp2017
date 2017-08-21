@@ -37,7 +37,7 @@ get_header(); ?>
             <ul class="List">
                 <li class="List__item List__item--tag">HTML5</li>
                 <li class="List__item List__item--tag">CSS / SCSS</li>
-                <li class="List__item List__item--tag">JavaScript / ES6</li>
+                <li class="List__item List__item--tag">JavaScript</li>
                 <li class="List__item List__item--tag">Git</li>
                 <li class="List__item List__item--tag">DevOps</li>
                 <li class="List__item List__item--tag">Community</li>
@@ -71,7 +71,7 @@ get_header(); ?>
         <div class="Post__column Post__column--right">
             <h3 class="Post__title">Frameworks & Tools</h3>
             <ul class="List">
-                <li class="List__item List__item--tag">Vue</li>
+                <li class="List__item List__item--tag">Vue / React</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
                 <li class="List__item List__item--tag">WordPress</li>
@@ -89,17 +89,17 @@ get_header(); ?>
                 <li class="List__item">
                     <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a> (IT)<br>
                     Frontend developer<br>
-                    November 2015 to April 2017
+                    2015 to 2017
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a> (IT)<br>
                     Frontend developer<br>
-                    June 2014 to November 2015
+                    2014 to 2015
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a> (IT)<br>
                     Frontend developer / UX / UI<br>
-                    September 2011 to May 2014
+                    2011 to 2014
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.apple.com" target="blank">Apple</a> (IRL)<br>
@@ -122,14 +122,14 @@ get_header(); ?>
             <ul class="List">
                 <li class="List__item List__item--tag">HTML5</li>
                 <li class="List__item List__item--tag">CSS / SCSS</li>
-                <li class="List__item List__item--tag">JavaScript / ES6</li>
+                <li class="List__item List__item--tag">JavaScript</li>
                 <li class="List__item List__item--tag">Git</li>
                 <li class="List__item List__item--tag">DevOps</li>
                 <li class="List__item List__item--tag">Community</li>
             </ul>
             <h3 class="Post__title">Frameworks & Tools</h3>
             <ul class="List">
-                <li class="List__item List__item--tag">Vue</li>
+                <li class="List__item List__item--tag">Vue / React</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
                 <li class="List__item List__item--tag">WordPress</li>
@@ -161,17 +161,17 @@ get_header(); ?>
                 <li class="List__item">
                     <a class="Link" href="http://www.objectway.it/IT/default.asp" target="blank">Objectway</a> (IT)<br>
                     Frontend developer<br>
-                    November 2015 to April 2017
+                    2015 to 2017
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.thelevelgroup.com/" target="blank">The Level Group</a> (IT)<br>
                     Frontend developer<br>
-                    June 2014 to November 2015
+                    2014 to 2015
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.pazienti.it" target="blank">Pazienti</a> (IT)<br>
                     Frontend developer / UX / UI<br>
-                    September 2011 to May 2014
+                    2011 to 2014
                 </li>
                 <li class="List__item">
                     <a class="Link" href="http://www.apple.com" target="blank">Apple</a> (IRL)<br>
