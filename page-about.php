@@ -74,8 +74,7 @@ get_header(); ?>
                 <li class="List__item List__item--tag">Vue / React</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
-                <li class="List__item List__item--tag">WordPress</li>
-                <li class="List__item List__item--tag">WooCommerce</li>
+                <li class="List__item List__item--tag">WordPress / WooCommerce</li>
                 <li class="List__item List__item--tag">Gulp / Webpack / NPM</li>
                 <li class="List__item List__item--tag">jQuery</li>
             </ul>
@@ -132,8 +131,7 @@ get_header(); ?>
                 <li class="List__item List__item--tag">Vue / React</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
-                <li class="List__item List__item--tag">WordPress</li>
-                <li class="List__item List__item--tag">WooCommerce</li>
+                <li class="List__item List__item--tag">WordPress / WooCommerce</li>
                 <li class="List__item List__item--tag">Gulp / Webpack / NPM</li>
                 <li class="List__item List__item--tag">jQuery</li>
             </ul>
