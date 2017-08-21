@@ -27,6 +27,7 @@ while ( have_posts() ) : the_post(); ?>
                     <h1 class="Heading__title Title Title__h1">
                         <?php the_title(); ?>
                     </h1>
+                    <h4 class="Heading__date Title Title__h4">Published on <?php the_date('F jS, Y'); ?></h4>
                 </div>
             </div>
             <div class="Heading__credits">

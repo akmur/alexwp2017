@@ -34,27 +34,28 @@
     }
 
     &__titleGroup {
-        padding: 2em;
         text-align: center;
-        width: 100%;
 
         @include tablet {
-            padding: 2em;
             text-align: right;
-            width: 50%;
-        }
-
-        @include desktop {
-            padding: 4em;
+            width: 100%;
         }
 
         #{$root}--singlePost & {
             display: inline-block;
+            padding: 2em;
             text-align: center;
 
             @include tablet {
                 margin-top: -5rem;
+                padding: 2em;
                 position: relative;
+                width: 100%;
+            }
+
+            @include desktop {
+                padding: 4em;
+                width: 75%;
             }
         }
 
@@ -66,12 +67,20 @@
     }
 
     &__titleGroupContent {
-        padding: 1rem;
+        background: rgba(palette(light), 0.8);
+        padding: 2rem;
+
+        @include tablet {
+            padding: 2rem 4rem;
+        }
+
+        #{$root}--singlePost & {
+            padding: 1rem;
+        }
     }
 
     &__title {
         #{$root}--singlePost & {
-            background: rgba(palette(light), 0.8);
             color: palette(dark);
             display: inline-block;
             font-weight: 300;
@@ -79,9 +88,18 @@
             padding: 0.5em 1em;
 
             @include tablet {
-                margin-bottom: 0.67em;
-                margin-top: 1.25em;
+                margin-bottom: 0.5em;
+                margin-top: 0em;
             }
+        }
+    }
+
+    &__date {
+        margin-top: 0.5rem;
+        @include font(sans, 1, 300);
+
+        @include desktop {
+            @include font(sans, 1.25, 200);
         }
     }
 
@@ -90,7 +108,7 @@
 
         @include tablet {
             display: block;
-            width: 50%;
+            width: 100%;
         }
 
         #{$root}--singlePost & {

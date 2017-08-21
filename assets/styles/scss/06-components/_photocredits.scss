@@ -1,4 +1,5 @@
 .PhotoCredits {
+    @include font('sans', 0.875, 300);
     background: rgba(palette(light), 0.8);
     padding: 1rem 2rem;
 
