@@ -23,7 +23,7 @@
         margin-top: 0;
 
         @include tablet {
-            @include font(sans, 1.5, 300);
+            @include font(sans, 1.375, 300);
         }
     }
 

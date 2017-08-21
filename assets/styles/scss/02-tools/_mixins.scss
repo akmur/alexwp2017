@@ -2,7 +2,7 @@ $palettes: (
     dark: (
         low: lighten($color-base-grey, 10%),
         base:  $color-base-grey,
-        high: darken($color-base-grey, 10%)
+        high: darken($color-base-grey, 20%)
     ),
     primary: (
         low: lighten($color-base-blue, 10%),
