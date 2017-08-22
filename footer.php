@@ -17,7 +17,7 @@
     <div class="Footer">
         <div class="Footer__container">
             <p class="Footer__text">
-                You can find me on <a class="Footer__link Link" href="https://twitter.com/akmur">Twitter</a>, <a class="Footer__link Link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="Footer__link Link" href="https://github.com/akmur">Github</a>.
+                <i data-feather="circle"></i> You can find me on <a class="Footer__link Link" href="https://twitter.com/akmur">Twitter</a>, <a class="Footer__link Link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="Footer__link Link" href="https://github.com/akmur">Github</a>.
             </p>
             <p class="Footer__text">
                 This website is built with <a class="Footer__link Link" href="https://wordpress.org">WordPress</a> and some 
