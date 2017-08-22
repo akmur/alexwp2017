@@ -1,6 +1,5 @@
 /* global require location document */
 
-import './feather';
 const axios = require('axios');
 
 const SiteProtocol = location.protocol;
@@ -139,4 +138,3 @@ const app = (function(){
 })();
 
 app.init();
-feather.replace()
