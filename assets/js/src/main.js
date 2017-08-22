@@ -89,7 +89,9 @@ const app = (function(){
                 // set total pages number
                 Store.setTotalPages(response.headers['x-wp-totalpages'][0]);
                 // find out if we are on the last page
-                hideLoadMore();
+                if (NumberOfPosts > 3) {
+                    hideLoadMore();
+                };
             }).catch(function(ex){
                 console.log('parsing failed', ex);
             })
@@ -137,3 +139,4 @@ const app = (function(){
 })();
 
 app.init();
+feather.replace()
