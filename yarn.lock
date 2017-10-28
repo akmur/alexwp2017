@@ -1909,6 +1909,10 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
+feather-icons@^3.2.2:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-3.3.0.tgz#510d1b37cd99463f2439fc7c673577b8398ac2f2"
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"

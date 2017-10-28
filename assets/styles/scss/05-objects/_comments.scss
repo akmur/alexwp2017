@@ -29,8 +29,14 @@
 
     .comments-title,
     .comment-reply-title {
-        @include font(sans, 2, 400);
+        @include font(sans, 1.5, 400);
         margin-bottom: 1em;
+
+        @include tablet {
+           @include font(sans, 2, 400);
+
+        }
+
     }
 
     .comment-list,
@@ -68,7 +74,11 @@
         float: left;
         margin-right: 1rem;
         position: static;
-        width: 64px;
+        width: 48px;
+
+        @include tablet {
+            width: 64px;
+        }
     }
 
     .children .comment-author .avatar {
@@ -86,8 +96,12 @@
     }
 
     .comment-metadata {
-        @include font('sans', 0.875, 300);
+        @include font('sans', 0.65, 300);
         text-transform: uppercase;
+
+        @include tablet {
+            @include font('sans', 0.875, 300);
+        }
     }
 
     .comment-metadata a {
@@ -112,6 +126,7 @@
     .comment-reply-link {
         @extend .Button;
         font-size: 1.25em !important;
+        margin-top: 1em;
         padding: 0.5em !important;
         text-align: center;
 
@@ -130,8 +145,13 @@
     }
 
     .children .comment-author .avatar {
-        height: 64px;
-        width: 64px;
+        height: 48px;
+        width: 48px;
+
+        @include tablet {
+            height: 64px;
+            width: 64px;
+        }
     }
 
     .no-comments,
@@ -157,7 +177,11 @@
     }
 
     label {
-        @include font(sans, 1.25, 300);
+        @include font(sans, 0.875, 300);
+
+        @include tablet {
+            @include font(sans, 1, 300);
+        }
     }
 
     .comment-list {
@@ -217,7 +241,12 @@
     .comment-respond {
         background: lighten(palette(light, high), 4%);
         border: 1px solid palette(primary);
-        padding: 4rem 4rem 2rem;
+        padding: 1rem;
+        margin-bottom: 0;
+
+        @include tablet {
+            padding: 2rem;
+        }
     }
 
     textarea,
@@ -225,6 +254,24 @@
     input[type='email'],
     input[type='url'] {
         background: #fff;
+        font-size: 1rem;
+        padding: 0.5em;
+        width: 100%;
+
+        @include tablet {
+            padding: 1em;
+        }
+    }
+
+    input[type='submit'] {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: 4px dashed palette(primary);
+
     }
 
     #cancel-comment-reply-link {
