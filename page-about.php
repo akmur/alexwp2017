@@ -132,7 +132,7 @@ get_header(); ?>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
                 <li class="List__item List__item--tag">WordPress / WooCommerce</li>
-                <li class="List__item List__item--tag">Gulp / Webpack / NPM</li>
+                <li class="List__item List__item--tag">Gulp / Webpack / NPM scripts</li>
                 <li class="List__item List__item--tag">jQuery</li>
             </ul>
             <h3 class="Post__title">Spoken Languages</h3>
