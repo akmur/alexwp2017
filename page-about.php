@@ -71,11 +71,11 @@ get_header(); ?>
         <div class="Post__column Post__column--right">
             <h3 class="Post__title">Frameworks & Tools</h3>
             <ul class="List">
-                <li class="List__item List__item--tag">Vue / React</li>
+                <li class="List__item List__item--tag">Vue / React / Handlebars</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
                 <li class="List__item List__item--tag">WordPress / WooCommerce</li>
-                <li class="List__item List__item--tag">Gulp / Webpack / NPM</li>
+                <li class="List__item List__item--tag">Gulp / Webpack / NPM scripts</li>
                 <li class="List__item List__item--tag">jQuery</li>
             </ul>
             <h3 class="Post__title">Main Work Experience</h3>
@@ -128,7 +128,7 @@ get_header(); ?>
             </ul>
             <h3 class="Post__title">Frameworks & Tools</h3>
             <ul class="List">
-                <li class="List__item List__item--tag">Vue / React</li>
+                <li class="List__item List__item--tag">Vue / React / Handlebars</li>
                 <li class="List__item List__item--tag">Express</li>
                 <li class="List__item List__item--tag">ITCSS / BEM</li>
                 <li class="List__item List__item--tag">WordPress / WooCommerce</li>
